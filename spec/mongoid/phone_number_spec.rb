@@ -4,9 +4,9 @@ class Person
   include Mongoid::Document
 
   field :name
-  field :office_phone, :type => Mongoid::PhoneNumber
-  field :home_phone, :type => Mongoid::PhoneNumber
-  field :cell_phone, :type => Mongoid::PhoneNumber
+  field :office_phone, :type => MongoTypes::PhoneNumber
+  field :home_phone, :type => MongoTypes::PhoneNumber
+  field :cell_phone, :type => MongoTypes::PhoneNumber
 end
 
 Fabricator(:person) do
@@ -16,7 +16,7 @@ Fabricator(:person) do
   cell_phone "1231231212"
 end
 
-describe Mongoid::PhoneNumber do
+describe MongoTypes::PhoneNumber do
   # TODO: remove arguments from Fabricate. Currently, it is not working properly without them.
   let(:person) { Fabricate(:person, :name => 'Ben', :office_phone => "1 809 123 1234", :home_phone => "123-456-7891", :cell_phone => "1231231212") }
 

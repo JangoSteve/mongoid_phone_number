@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
 
-  s.add_dependency("mongoid", "~>2.0.0")
+  #s.add_dependency("mongoid", "~>2.0.0")
   s.add_dependency("bson_ext", ">=0")
   s.add_dependency("activesupport", "~>3.0.0")
 
